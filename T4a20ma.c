@@ -1,10 +1,10 @@
 // -----------------------------------------------------------------------------
-// Projeto : IPD Cabine
+// Projeto : Sa√≠da 4-20mA
 // Placa: CLP PIC 40 com MikroE 4-20mA T Click
 // Microcontrolador : 16F887
 // Data : 02/04/2020
 // Autor : Marcus Roberto
-// Vers„o: 1.0
+// Vers√£o: 1.0
 // Compilador: MikroC PRO for PIC v.6.6.2
 // Obs: Calibragem aferida: 20mA - 4012 | 4mA  - 0814 | 199 U.N./mA
 //------------------------------------------------------------------------------
@@ -90,7 +90,7 @@ void writeSPI() {
      Chip_Select = 1;
      delay_ms(100);
 
-     for(x = 48; x < 255; x++) {                                                // Estrutura de repetiÁ„o para onda senÛide (subida)
+     for(x = 48; x < 255; x++) {                                                // Estrutura de repeti√ß√£o para onda sen√≥ide (subida)
          for(y = 0; y < 255; y++) {
              //Chip_Select = 0;
              SPI1_Write(x);
@@ -100,7 +100,7 @@ void writeSPI() {
          }
      }
      
-     for(x = 255; x > 48; x--) {                                                // Estrutura de repetiÁ„o para onda senÛide (descida)
+     for(x = 255; x > 48; x--) {                                                // Estrutura de repeti√ß√£o para onda sen√≥ide (descida)
          for(y = 255; y > 0; y--) {
              //Chip_Select = 0;
              SPI1_Write(x);
